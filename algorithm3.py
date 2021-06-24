@@ -19,7 +19,7 @@ def min_path_sum(grid):
     for i in range(1,x):
         for j in range(1,y):
             grid[i][j] += min(grid[i][j-1], grid[i-1][j])
-
+    print("gittest")
     return grid[-1][-1]
 min_path_sum([[1,1,3,1],[1,1,5,1],[1,4,2,1],[1,2,3,4]])
 
