@@ -22,4 +22,3 @@ def min_path_sum(grid):
     
     return grid[-1][-1]
 min_path_sum([[1,1,3,1],[1,1,5,1],[1,4,2,1],[1,2,3,4]])
-
