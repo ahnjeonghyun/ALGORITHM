@@ -10,4 +10,4 @@ def maxProfit(prices):
   if len(a) <= 0:
     return 0
 
-  return 0 if max(a) <= 0 else max(a) 
+  return 0 if max(a) <= 0 else max(a)
