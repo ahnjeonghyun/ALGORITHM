@@ -14,3 +14,21 @@
 # 3초 시점의 ₩3은 1초뒤에 가격이 떨어집니다. 따라서 1초간 가격이 떨어지지 않은 것으로 봅니다.
 # 4초 시점의 ₩2은 1초간 가격이 떨어지지 않았습니다.
 # 5초 시점의 ₩3은 0초간 가격이 떨어지지 않았습니다.
+
+from collections import deque
+
+def solution(prices):
+    deq = deque(prices)
+    lst = []
+    
+    while deq:
+        pick = deq.popleft()
+        count = 0
+        
+        for i in deq:
+            count += 1
+            if pick > i:
+                break
+        lst.append(count)
+
+    return lst
